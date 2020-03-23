@@ -5,4 +5,4 @@ echo enter the second value
 read b
 echo enter the third value
 read c
-echo $(( $a + $b / $c ))
+echo $(( $c0 + $a / $b ))
