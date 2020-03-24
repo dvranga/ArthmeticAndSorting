@@ -28,7 +28,6 @@ values[ ((counter++)) ]=${value[FourthComputation]}
 echo elements in values
 echo ${values[@]}
 echo sorting the elemets
-temp=0
 for (( i = 0; i < 4 ; i++ ))
 do
    for (( j = $i; j < 4; j++ ))
