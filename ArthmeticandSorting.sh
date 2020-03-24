@@ -1,15 +1,12 @@
 # taking three input from user
-echo enter the first value
 read a
-echo enter the second value
 read b
-echo enter the third value
 read c
 echo $(( $a % $(($b + $c)) ))
 echo $(( $a + $(($b * $c)) ))
 echo $(( $a * $(($b + $c)) ))
 echo $(( $c + $(($a / $b)) ))
-echo stroring values into dictionary
+echo storing values into dictionary
 declare -A value
 value[FirstComputation]=$(( $a % $(($b + $c)) ))
 value[SecondComputation]=$(( $a + $(($b * $c)) ))
@@ -27,7 +24,6 @@ values[ ((counter++)) ]=${value[ThirdComputation]}
 values[ ((counter++)) ]=${value[FourthComputation]}
 echo elements in values
 echo ${values[@]}
-echo sorting the elemets
 for (( i = 0; i < 4 ; i++ ))
 do
    for (( j = $i; j < 4; j++ ))
@@ -41,7 +37,6 @@ do
 done
 echo "Array in Desecending order order :"
 echo ${values[@]}
-echo sorting the elemets
 for (( i = 0; i < 4 ; i++ ))
 do
    for (( j = $i; j < 4; j++ ))
