@@ -25,4 +25,20 @@ values[ ((counter++)) ]=${value[FirstComputation]}
 values[ ((counter++)) ]=${value[SecondComputation]}
 values[ ((counter++)) ]=${value[ThirdComputation]}
 values[ ((counter++)) ]=${value[FourthComputation]}
+echo elements in values
+echo ${values[@]}
+echo sorting the elemets
+temp=0
+for (( i = 0; i < 4 ; i++ ))
+do
+   for (( j = $i; j < 4; j++ ))
+   do
+      if [ ${values[$i]} -lt ${values[$j]} ]; then
+           t=${values[$i]}
+           values[$i]=${values[$j]}
+           values[$j]=$t
+     fi
+   done
+done
+echo "Array in sorted order :"
 echo ${values[@]}
