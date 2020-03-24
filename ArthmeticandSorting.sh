@@ -33,7 +33,7 @@ for (( i = 0; i < 4 ; i++ ))
 do
    for (( j = $i; j < 4; j++ ))
    do
-      if [ ${values[$i]} -lt ${values[$j]} ]; then
+      if [ ${values[$i]} -gt ${values[$j]} ]; then
            t=${values[$i]}
            values[$i]=${values[$j]}
            values[$j]=$t
